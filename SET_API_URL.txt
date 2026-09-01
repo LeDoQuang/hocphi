@@ -1,0 +1,9 @@
+Truoc khi day len GitHub Pages, mo config.js va doi:
+
+  API_BASE: "http://127.0.0.1:8000"
+
+thanh URL Worker, vi du:
+
+  API_BASE: "https://hocphi-api.YOUR_SUBDOMAIN.workers.dev"
+
+config.js la file public va KHONG duoc chua token/secret/so tai khoan ngan hang.
