@@ -1,3 +1,3 @@
 window.HOCPHI_CONFIG = {
-  API_BASE: "https://hocphi-api.dogthekiller08.workers.dev"
+  API_BASE: "https://api.vansong.io.vn"
 };
