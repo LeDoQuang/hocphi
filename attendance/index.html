@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="color-scheme" content="light">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000 https:; base-uri 'none'; frame-ancestors 'none'">
+  <title>Điểm danh | Văn Song</title>
+  <link rel="icon" type="image/png" href="../a.png">
+  <link rel="stylesheet" href="../assets/site.css?v=22">
+</head>
+<body>
+  <main class="shell app-shell">
+    <header class="card student-header">
+      <div class="student-identity">
+        <div class="brand">VĂN SONG</div>
+        <h1 data-student-name>Học viên</h1>
+        <p class="student-code">Mã học viên: <strong data-student-code>—</strong></p>
+      </div>
+      <nav class="top-actions" aria-label="Điều hướng học viên">
+        <a class="btn" href="../payment/">Thanh toán</a>
+        <a class="btn active" href="../attendance/">Điểm danh</a>
+        <a class="btn" href="../password/">Đổi mật khẩu</a>
+        <button class="btn danger" type="button" data-logout>Đăng xuất</button>
+      </nav>
+    </header>
+    <section class="card attendance-card">
+      <div class="section-head">
+        <div>
+          <h2>Điểm danh</h2>
+          <p>Lịch sử các buổi học đã được ghi nhận.</p>
+        </div>
+      </div>
+      <div id="attendanceStats" class="stats"></div>
+      <div id="attendanceSummary" class="attendance-summary" hidden></div>
+      <div id="attendanceList"><div class="loading">Đang tải...</div></div>
+    </section>
+  </main>
+  <nav class="mobile-nav" aria-label="Điều hướng học viên">
+    <a href="../payment/">Thanh toán</a>
+    <a class="active" href="../attendance/">Điểm danh</a>
+    <a href="../password/">Đổi MK</a>
+    <button class="logout-mobile" type="button" data-logout>Đăng xuất</button>
+  </nav>
+  <script src="../config.js?v=22"></script>
+  <script src="../assets/common.js?v=22"></script>
+  <script src="../assets/attendance.js?v=22"></script>
+</body>
+</html>

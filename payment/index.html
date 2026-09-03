@@ -6,31 +6,34 @@
   <meta name="referrer" content="no-referrer">
   <meta name="color-scheme" content="light">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://img.vietqr.io data:; style-src 'self'; script-src 'self'; connect-src 'self' http://127.0.0.1:8000 http://localhost:8000 https:; base-uri 'none'; frame-ancestors 'none'; form-action 'self'">
-  <title>Thanh toán học phí</title>
-  <link rel="stylesheet" href="./assets/site.css?v=18">
+  <title>Thanh toán học phí | Văn Song</title>
+  <link rel="icon" type="image/png" href="../a.png">
+  <link rel="stylesheet" href="../assets/site.css?v=22">
 </head>
 <body>
   <main class="shell app-shell">
     <header class="card student-header">
       <div class="student-identity">
-        <div class="brand">HỌC PHÍ</div>
+        <div class="brand">VĂN SONG</div>
         <h1 data-student-name>Học viên</h1>
         <p class="student-code">Mã học viên: <strong data-student-code>—</strong></p>
       </div>
       <nav class="top-actions" aria-label="Điều hướng học viên">
-        <a class="btn active" href="./payment.html">Thanh toán</a>
-        <a class="btn" href="./attendance.html">Điểm danh</a>
-        <a class="btn" href="./password.html">Đổi mật khẩu</a>
+        <a class="btn active" href="../payment/">Thanh toán</a>
+        <a class="btn" href="../attendance/">Điểm danh</a>
+        <a class="btn" href="../password/">Đổi mật khẩu</a>
         <button class="btn danger" type="button" data-logout>Đăng xuất</button>
       </nav>
     </header>
-
     <div class="page-grid">
       <section class="card payment-card">
         <div class="payment-copy">
           <span class="amount-label">Số tiền cần thanh toán</span>
           <strong id="amountDue" class="amount-due">—</strong>
-          <div class="transfer-box"><span>Nội dung chuyển khoản</span><strong id="transferContent">—</strong></div>
+          <div class="transfer-box">
+            <span>Nội dung chuyển khoản</span>
+            <strong id="transferContent">—</strong>
+          </div>
           <p class="payment-hint">QR tự điền đúng số tiền còn thiếu và mã học viên. Trước khi xác nhận trên ứng dụng ngân hàng, hãy kiểm tra lại người nhận.</p>
         </div>
         <div id="qrWrap" class="qr-card" hidden>
@@ -38,12 +41,20 @@
           <img id="qrImage" alt="QR thanh toán học phí">
         </div>
         <div id="paidState" class="paid-state" hidden>
-          <div><div class="paid-icon">✓</div><strong>Đã thanh toán đủ</strong><span>Hiện tại không còn khoản nào cần thanh toán.</span></div>
+          <div>
+            <div class="paid-icon">✓</div>
+            <strong>Đã thanh toán đủ</strong>
+            <span>Hiện tại không còn khoản nào cần thanh toán.</span>
+          </div>
         </div>
       </section>
-
       <section id="bankVerify" class="card verify-card" hidden>
-        <div class="section-head"><div><h2>Thông tin nhận tiền</h2><p>Đối chiếu trước khi xác nhận chuyển khoản.</p></div></div>
+        <div class="section-head">
+          <div>
+            <h2>Thông tin nhận tiền</h2>
+            <p>Đối chiếu trước khi xác nhận chuyển khoản.</p>
+          </div>
+        </div>
         <div class="verify-grid">
           <div class="verify-item"><span>Ngân hàng</span><strong id="bankId">—</strong></div>
           <div class="verify-item"><span>Số tài khoản</span><strong id="accountNo">—</strong></div>
@@ -52,22 +63,25 @@
         </div>
         <p class="verify-note">Tên người nhận trong ứng dụng ngân hàng phải trùng với thông tin hiển thị ở đây.</p>
       </section>
-
       <section class="card section-card">
-        <div class="section-head"><div><h2>Các khoản còn phải thanh toán</h2><p>Chỉ hiển thị những khoản hiện còn thiếu.</p></div></div>
+        <div class="section-head">
+          <div>
+            <h2>Các khoản còn phải thanh toán</h2>
+            <p>Chỉ hiển thị những khoản hiện còn thiếu.</p>
+          </div>
+        </div>
         <div id="chargesList" class="data-list"><div class="loading">Đang tải...</div></div>
       </section>
     </div>
   </main>
-
   <nav class="mobile-nav" aria-label="Điều hướng học viên">
-    <a class="active" href="./payment.html">Thanh toán</a>
-    <a href="./attendance.html">Điểm danh</a>
-    <a href="./password.html">Đổi MK</a>
+    <a class="active" href="../payment/">Thanh toán</a>
+    <a href="../attendance/">Điểm danh</a>
+    <a href="../password/">Đổi MK</a>
     <button class="logout-mobile" type="button" data-logout>Đăng xuất</button>
   </nav>
-  <script src="./config.js?v=18"></script>
-  <script src="./assets/common.js?v=18"></script>
-  <script src="./assets/payment.js?v=18"></script>
+  <script src="../config.js?v=22"></script>
+  <script src="../assets/common.js?v=22"></script>
+  <script src="../assets/payment.js?v=22"></script>
 </body>
 </html>
